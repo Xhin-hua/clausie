@@ -1,0 +1,334 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> steven clausie Official Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9475143469051297"
+     crossorigin="anonymous"></script>
+    
+    <style>
+    
+    ri {
+        
+  border-top: 3px solid red;
+  text-align: center;
+        position: absolute;
+        background-size: cover;
+  background-position: center;
+  transition: right 4s;
+        
+    }
+        
+div, .slide-in-word  {
+  position: relative;
+  font-size: 24px;
+  animation: slide-in 1s forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+/*yes*/
+
+img{
+        width: 100%;
+    height: 200px;
+    margin: ;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* today*/
+
+.gallery-container {
+  position: relative ;
+  width: ;
+  margin: 10px auto;
+  /* border-top: 3px solid #0021FF;
+  margin-block-top: 5px solid red; */ 
+}
+
+.gallery-slider {
+  position: relative;
+  width: 200px;
+  height: 300px;
+}
+
+.slide {
+   
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  transition: left 5s;
+ /* animation: fade-out 4s ease;*/
+}
+
+.active {
+  left: 0;
+}
+
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.prev-btn, .next-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: relative;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  color: #ccc;
+}
+
+.prev-btn {
+   left: 0;
+}
+.next-btn {
+    right: 0;
+}
+
+
+.gallery-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 5px;
+  transition: background-color 0.5s;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+
+
+    </style>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+            console.log("hello");
+            
+            
+const slider = document.querySelector('.gallery-slider');
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+const dots = document.querySelectorAll('.dot');
+
+//here
+const here = document.querySelector('#here');
+const gallery = document.querySelector('.gallery-container');
+
+/*
+console.log("slides :",slides);
+ setTimeout ( () => { here.parentNode.replaceChild(slides[0], here);
+ 
+     
+ },3000 ); */
+ 
+slides.forEach((slide,i) => { console.log('hello', gallery ); });
+
+let preSlide = slides[2]  ; 
+let currentSlide = 0 ;
+
+ slides.forEach((slide, index) => {
+    slide.style.left = `${ index * 10 }%`; });
+
+// Function to update the slide
+
+
+let st = 30;
+const startloop = () => { setTimeout(() => { 
+    let s = st % 3; 
+    let slide = slides[s];
+     slide.id = "me";
+          preSlide.parentNode.replaceChild(slide , preSlide);
+      
+           preSlide = document.querySelector('#me');
+          console.log( "me is : ", preSlide);
+          
+          //the one for dots
+          let t = (s+1)%3 ;
+          console.log('dots',dots[1].classList);
+              dots[t].classList.remove('active');
+    if (s === currentSlide) {
+      dots[s].classList.add('active');
+    }
+    
+    console.log("s : ",s);
+    st++; startloop();
+}, 3000  ); } 
+
+startloop();
+
+
+
+// Function to navigate to the previous slide
+function prevSlide() {
+st = st-2;
+}
+
+// Function to navigate to the next slide
+function nextSlide() {
+st = st++;
+}
+
+// Event listeners for navigation buttons
+prevBtn.addEventListener('click', prevSlide);
+nextBtn.addEventListener('click', nextSlide);
+
+// Event listeners for dots
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentSlide = index;
+    updateSlide();
+  });
+});
+
+
+            
+        })
+    </script>
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#images">images</a></li>
+                <li><a href="start1.html">more...</a></li>
+              
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+        <div class="slide-in-word">Hello UGANDA!</div>
+        
+        
+<div class="gallery-container">
+    
+   
+  <div class="gallery-slider">
+    <div class="slide active">
+      <img src="images/s1.jpg" alt="Image 1">
+          <span class="ri" > lets meet Online </span>
+    </div>
+    <div class="slide">
+      <img src="images/s2.jpg" alt="s2">
+      <span class="ri" > lets clap </span>
+    </div>
+    <div class="slide">
+      <img src="images/s3.jpg" alt="Image 3">
+          <span class="ri" > i feel bored </span>
+    </div>
+    
+    
+    <!-- Add more slides as needed -->
+  </div>
+  <div class="gallery-nav">
+    <button class="prev-btn">&lt;</button>
+    <button class="next-btn">&gt;</button>
+  </div>
+  <div class="gallery-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <!-- Add more dots as needed -->
+  </div>
+</div>
+<section  ><div id="here" > </div></section>
+
+
+
+        <section id="home">
+            <h1>Introduction</h1>
+            <p  class="slide-in-word" >Welcome to the official website of Steven clausie, a highly driven and ambitious individual who embodies the true spirit of a hustler. With a strong passion for excellence and a commitment to delivering exceptional results, Steven has established himself as a respected figure in his field.</p>
+        </section>
+        <div class="gallery">
+          <section id="images">
+            <h1>Images</h1>
+            <div class="image-container">
+                <!-- Image galleries will go here -->
+                 <img src="images/s1.jpg" alt="smile">
+            </div>
+        </section> 
+        <section id="images">
+            <h1>Images</h1>
+            <div class="image-container">
+                <!-- Image galleries will go here -->
+                 <img src="images/s4.jpg" alt="smile">
+            </div>
+        </section>
+        <section id="videos" style="position:relative" >
+            <h1>Videos</h1>
+            <div class="video-container">
+                <!-- Video embeds will go here -->
+                <video width="600" height="400" src="videos/s1.mp4" controls></video>
+            </div>
+        </section>
+        <button><a href="start1.html">more media!</a></button>
+      </div>
+        <section id="about">
+            <h1>About Steven clausie</h1>
+            <p>Steven Clausie is a highly sociable and devout Christian individual who thrives in collaborative environments. With an unwavering work ethic and unrelenting passion for excellence, he consistently delivers exceptional results and acknowledges his accomplishments with his peers.</p>
+            <p>
+Outside of his professional pursuits, Steven is an avid golfer with a distinguished reputation in the sport. In his rare moments of downtime, he finds solace in music, often unwinding to his favorite tunes and recharging for his next endeavor.</p>
+        </section>
+    </main>
+    
+    
+
+    
+    <footer>
+        <p>Mobile Tel: 
+        <ul><li><a href="tel : +256703050180">+256 703 050180</a></li>
+            <li><a href="tel : +256760626675">+256  760 626675</a></li>
+        </ul>
+        </p>
+        <p>&copy; 2025 Steven Clausie Official Website</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+

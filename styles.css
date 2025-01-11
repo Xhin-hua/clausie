@@ -1,0 +1,299 @@
+/*mukaaya steven designs..*/
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #007bff; /* Blue color */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    justify-content: space-between;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    margin-top: 2px solid #fFF;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+header nav ul li:hover{
+    background-color: #BFE0FF;
+}
+
+header nav ul li:not(:last-child){
+    border-right: 2px solid #FFFFFF;
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding-right: 7px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+section {
+    background-color: #f7f7f7;
+    padding: 20px;
+   
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, f, 0.1);
+
+}
+section a{
+        -webkit-animation : slide 5s linear 0s 2;
+    animation: slide 5s linear 0s 2 ;
+}
+section:hover{
+    background-color: #B9E0FF;
+}
+
+h1 {
+    color: #007bff; /* Blue color */
+}
+
+#home, #about{
+     border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.video-container {
+        border-radius: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-container {
+    border-radius: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+img {
+      image-rendering: -webkit-optimize-contrast;
+}
+
+footer {
+    background-color: #007bff; /* Blue color */
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    clear: both;
+}
+
+@-webkit-keyframes slide{
+    to{
+        left: 100%;
+    }
+}
+@keyframes slide{
+    from{
+        left: 0;
+    }
+     to{
+        left: 100%;
+    }
+}
+
+@-webkit-keyframes fade-out{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframe fade-out{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+/*image and video modificatiins*/
+
+body {
+
+    
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+button {
+
+background-color: #0039FF;
+color: white;
+border: none;
+border-radius: 10px;
+padding: 0.5em;
+cursor: pointer;
+}
+buttom:hover {
+    background-color:#769FAF ;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#home {
+    margin-
+    
+}
+
+
+/*new*/
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery img, .gallery video {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.gallery img:hover, .gallery video:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+
+.image-gallery {
+  position: relative;
+  width: 100%;
+  height: 500px; 
+  overflow: hidden;
+}
+
+.image-slide {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: slide-in 2s ease-in-out;
+}
+
+.image-slide:nth-child(2) {
+  animation-delay: 4s;
+}
+
+.image-slide:nth-child(3) {
+  animation-delay: 6s;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+.deep-element {
+  position: relative;
+  width: 80%;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(100%);
+  animation: slide-up 1s forwards;
+}
+
+/*.title*/ .deep-element  {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  transform: translateX(-100%);
+  animation: slide-in 1s forwards;
+  animation-delay: 0.5s;
+}
+
+.description {
+  font-size: 18px;
+  color: #666;
+  transform: translateX(-100%);
+  animation: slide-in 1s forwards;
+  animation-delay: 1s;
+}  
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

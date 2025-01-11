@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+    </style>
+    <script>
+        
+        document.addEventListener("DOMContentLoaded", ()=> {
+            
+            console.log("its me dude");
+const gallery = document.querySelector('.gallery');
+const images = gallery.querySelectorAll('img');
+const videos = gallery.querySelectorAll('video');
+
+let currentImageIndex = 0;
+let currentVideoIndex = 0;
+
+function showNextImage() {
+    images[currentImageIndex].classList.remove('active');
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    images[currentImageIndex].classList.add('active');
+}
+
+function showNextVideo() {
+    videos[currentVideoIndex].classList.remove('active');
+    currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+    videos[currentVideoIndex].classList.add('active');
+}
+
+setInterval(showNextImage, 3000);
+setInterval(showNextVideo, 3000);
+        });
+    </script>
+    
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Navigation links -->
+        </nav>
+    </header>
+    <main>
+        <section class="gallery">
+            <!-- Photo and video gallery -->
+            <section class="gallery">
+    <h2>Photos</h2>
+    <div class="image-gallery">
+        <img src="images/s1.jpg" alt="smile">
+        <img src="images/s2.jpg" alt="Image 2">
+        <img src="images/s3.jpg" alt="Image 3">
+        <img src="images/s4.jpg" alt="Image 3">
+        <img src="images/s5.jpg" alt="Image 3">
+       
+       
+        <!-- Add more images here -->
+    </div>
+    <h2>Videos</h2>
+    <div class="video-gallery">
+        <div ><video src="videos/s1.mp4" controls></video>
+        <a href="Videos/s1.mp4" download ="steve dance">download</a>
+        </div>
+         <div class="video-gallery">
+        <div ><video src="videos/s2.mp4" controls></video>
+        <a href="Videos/s2.mp4" download ="steve dance">download</a>
+        </div>
+         <div class="video-gallery">
+        <div ><video src="videos/s3.mp4" controls></video>
+        <a href="Videos/s3.mp4" download ="steve dance">download</a>
+        </div>
+         <div class="video-gallery">
+        <div ><video src="videos/s4.mp4" controls></video>
+        <a href="Videos/s4.mp4" download ="steve dance">download</a>
+        </div>
+         <div class="video-gallery">
+        <div ><video src="videos/s5.mp4" controls></video>
+        <a href="Videos/s5.mp4" download ="steve dance">download</a>
+        </div>
+        
+        
+        
+        <!-- Add more videos here -->
+    </div>
+</section>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+
